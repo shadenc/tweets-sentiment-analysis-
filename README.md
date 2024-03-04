@@ -10,8 +10,7 @@ Efficient model training and prediction capabilities
 
 ## Installation:
 
- Prerequisites: This project requires Python 3.x and the following libraries:
-
+ This project requires the following libraries:
 numpy
 pandas
 nltk
