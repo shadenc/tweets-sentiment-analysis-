@@ -16,7 +16,7 @@ from utils import process_tweet, build_freqs
 all_positive_tweets = twitter_samples.strings('positive_tweets.json')
 all_negative_tweets = twitter_samples.strings('negative_tweets.json')
 
-# split the data into two pieces, one for training and one for testing (validation set) 
+
 test_pos = all_positive_tweets[4000:]
 train_pos = all_positive_tweets[:4000]
 test_neg = all_negative_tweets[4000:]
@@ -35,7 +35,7 @@ print("test_y.shape = " + str(test_y.shape))
 # create frequency dictionary
 freqs = build_freqs(train_x, train_y)
 
-# check the output
+
 print("type(freqs) = " + str(type(freqs)))
 print("len(freqs) = " + str(len(freqs.keys())))
 
@@ -48,7 +48,7 @@ def sigmoid(z):
     h = 1 / (1 + np.exp(-z))
 
     
-    return h # Testing your function 
+    return h # Testing the function 
 if (sigmoid(0) == 0.5):
     print('SUCCESS!')
 else:
@@ -57,7 +57,7 @@ else:
 if (sigmoid(4.92) == 0.9927537604041685):
     print('CORRECT!')
 else:
-    print('Oops again!') # Test your function
+    print('Oops again!') # Test the function
 w1_unittest.test_sigmoid(sigmoid) 
 -1 * (1 - 0) * np.log(1 - 0.9999) 
 -1 * np.log(0.0001) # loss is about 9.2
@@ -85,7 +85,7 @@ tmp_Y = (np.random.rand(10, 1) > 0.35).astype(float)
 
 tmp_J, tmp_theta = gradientDescent(tmp_X, tmp_Y, np.zeros((3, 1)), 1e-8, 700)
 print(f"The cost after training is {tmp_J:.8f}.")
-print(f"The resulting vector of weights is {[round(t, 8) for t in np.squeeze(tmp_theta)]}")# UNQ_C3 (UNIQUE CELL IDENTIFIER, DO NOT EDIT)
+print(f"The resulting vector of weights is {[round(t, 8) for t in np.squeeze(tmp_theta)]}")
 def extract_features(tweet, freqs):
 
     word_l = process_tweet(tweet)
